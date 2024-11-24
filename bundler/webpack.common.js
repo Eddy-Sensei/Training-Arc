@@ -24,6 +24,7 @@ export default {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html'),
             minify: true,
+            scriptLoading: 'module',
         }),
         new MiniCSSExtractPlugin(),
     ],
@@ -78,4 +79,8 @@ export default {
             },
         ],
     },
+    resolve: {
+        extensions: ['.js'],
+    },
+
 };
